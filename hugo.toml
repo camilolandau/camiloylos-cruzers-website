@@ -1,0 +1,4 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Camilo y los Cruzers'
+theme = 'blowfish'

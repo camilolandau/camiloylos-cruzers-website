@@ -1,0 +1,29 @@
+# Site metadata
+description = "Camilo y los Cruzers - exploring the intersections of Latin music and Black music with an all-star lineup of renowned musicians."
+# mainSections = ["posts"]
+
+# Color scheme (matches assets/css/schemes/camilo.css)
+colorScheme = "camilo"
+
+# Homepage layout
+[homepage]
+  layout = "page"
+  showRecent = false
+
+# Article display
+[article]
+  showDate = false
+  showAuthor = false
+  showBreadcrumbs = true
+  showPagination = true
+  showReadingTime = false
+  showWordCount = false
+
+# Header
+[header]
+  layout = "basic"
+
+# Footer
+[footer]
+  showCopyright = true
+  showThemeAttribution = false

@@ -1,0 +1,28 @@
+{{- $title := .Get "title" -}}
+{{- $date := .Get "date" -}}
+{{- $time := .Get "time" | default "" -}}
+{{- $endtime := .Get "endtime" | default "" -}}
+{{- $location := .Get "location" | default "" -}}
+{{- $details := .Get "details" | default (printf "Camilo y los Cruzers at %s" $title) -}}
+{{- $url := .Get "url" | default "" -}}
+
+{{/* Build Google Calendar URL */}}
+{{- $gcalDates := "" -}}
+{{- if $time -}}
+  {{- $gcalDates = printf "%sT%s/%s" (replaceRE "-" "" $date) (replaceRE ":" "" $time) "" -}}
+{{- end -}}
+
+<div class="calendar-buttons" style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; margin-bottom: 16px;">
+  {{- if and $date $time -}}
+  <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{ $title | urlquery }}&dates={{ replaceRE "-" "" $date }}T{{ replaceRE ":" "" $time }}00/{{ replaceRE "-" "" $date }}T{{ replaceRE ":" "" ($endtime | default "1600") }}00&details={{ $details | urlquery }}{{ with $location }}&location={{ . | urlquery }}{{ end }}" target="_blank" rel="noopener" class="cal-btn" style="display: inline-flex; align-items: center; gap: 6px; font-family: 'DM Sans', sans-serif; font-size: 13px; padding: 6px 14px; border-radius: 4px; background: rgb(46, 130, 52); color: white; text-decoration: none; transition: background 0.2s;">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    Google Calendar
+  </a>
+  {{- end -}}
+  {{- if $date -}}
+  <a href="data:text/calendar;charset=utf-8,BEGIN%3AVCALENDAR%0AVERSION%3A2.0%0APRODID%3A-//CamiloYLosCruzers//EN%0ABEGIN%3AVEVENT%0ASUMMARY%3A{{ $title | urlquery }}%0A{{ with $time }}DTSTART%3A{{ replaceRE "-" "" $date }}T{{ replaceRE ":" "" . }}00%0ADTEND%3A{{ replaceRE "-" "" $date }}T{{ replaceRE ":" "" ($endtime | default "1600") }}00%0A{{ else }}DTSTART%3BVALUE%3DDATE%3A{{ replaceRE "-" "" $date }}%0A{{ end }}DESCRIPTION%3A{{ $details | urlquery }}%0A{{ with $location }}LOCATION%3A{{ . | urlquery }}%0A{{ end }}END%3AVEVENT%0AEND%3AVCALENDAR" download="camilo-y-los-cruzers-{{ $title | urlize }}.ics" class="cal-btn" style="display: inline-flex; align-items: center; gap: 6px; font-family: 'DM Sans', sans-serif; font-size: 13px; padding: 6px 14px; border-radius: 4px; background: rgb(210, 88, 36); color: white; text-decoration: none; transition: background 0.2s;">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    Download .ics
+  </a>
+  {{- end -}}
+</div>

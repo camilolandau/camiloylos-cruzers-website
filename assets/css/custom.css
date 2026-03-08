@@ -1,0 +1,297 @@
+/* Fonts (loaded via extend-head.html partial) */
+html {
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bitter', serif;
+}
+
+/* =============================================
+   BACKGROUND — animated SVG + warm gradient wash
+   ============================================= */
+body {
+  background-color: rgb(250, 245, 235) !important;
+}
+
+/* Animated SVG background layer — fixed behind everything */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: url('/images/bg-animation.svg') repeat;
+  background-size: 512px 512px;
+  pointer-events: none;
+}
+
+/* Warm gradient wash on top of the animation */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image:
+    /* orange wash, top-left */
+    radial-gradient(ellipse at 10% 10%, rgba(210, 88, 36, 0.10) 0%, transparent 50%),
+    /* orange wash, top-right */
+    radial-gradient(ellipse at 90% 5%, rgba(248, 148, 76, 0.08) 0%, transparent 45%),
+    /* orange wash, bottom-right */
+    radial-gradient(ellipse at 85% 90%, rgba(210, 88, 36, 0.10) 0%, transparent 50%),
+    /* peach wash, bottom-left */
+    radial-gradient(ellipse at 5% 85%, rgba(248, 168, 116, 0.07) 0%, transparent 45%),
+    /* warm center glow */
+    radial-gradient(ellipse at 50% 50%, rgba(248, 168, 116, 0.05) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+/* =============================================
+   CONTENT BACKDROP — subtle frosted glass behind text
+   ============================================= */
+article {
+  background: rgba(250, 245, 235, 0.55);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border-radius: 8px;
+  padding: 24px;
+  margin: 0 -24px;
+}
+
+/* =============================================
+   TEXT — greenish tones
+   ============================================= */
+body, article, p, li, span {
+  color: rgb(32, 64, 38) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: rgb(28, 72, 36) !important;
+}
+
+/* Nav links greenish */
+header nav a {
+  color: rgb(36, 80, 42) !important;
+}
+
+/* Keep specific elements their intended colors */
+.photo-credit {
+  color: rgb(100, 118, 96) !important;
+}
+
+form label {
+  color: rgb(40, 72, 44) !important;
+}
+
+/* Warm accent line under the site header */
+header nav {
+  border-bottom: 3px solid rgba(46, 130, 52, 0.35);
+}
+
+/* Style links with the terracotta orange */
+article a:not(.btn) {
+  text-decoration-color: rgba(210, 88, 36, 0.4);
+}
+
+/* =============================================
+   SOCIAL LINK ICONS
+   ============================================= */
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.social-link img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.social-link:hover img {
+  opacity: 1;
+}
+
+/* =============================================
+   CONTACT FORM styling
+   ============================================= */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  font-family: 'DM Sans', sans-serif;
+  border: 2px solid rgba(180, 168, 148, 0.6);
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 100%;
+  max-width: 400px;
+  background: rgb(255, 255, 255);
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
+  outline: none;
+  border-color: rgb(210, 88, 36);
+  box-shadow: 0 0 0 2px rgba(210, 88, 36, 0.15);
+}
+
+form input[type="submit"],
+form button[type="submit"] {
+  font-family: 'Bitter', serif;
+  font-weight: 600;
+  background: rgb(210, 88, 36);
+  color: rgb(255, 245, 235);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 24px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+form input[type="submit"]:hover,
+form button[type="submit"]:hover {
+  background: rgb(184, 72, 28);
+}
+
+form label {
+  font-weight: 500;
+  color: rgb(78, 70, 58);
+}
+
+/* =============================================
+   KIT FORM — inline styled version
+   ============================================= */
+.kit-signup {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.kit-signup input[type="email"] {
+  font-family: 'DM Sans', sans-serif;
+  border: 2px solid rgba(46, 130, 52, 0.5);
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-size: 16px;
+  width: 280px;
+  max-width: 100%;
+  background: rgb(255, 255, 255);
+  color: rgb(52, 46, 38);
+}
+
+.kit-signup input[type="email"]:focus {
+  border-color: rgb(210, 88, 36);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(210, 88, 36, 0.2);
+}
+
+.kit-signup button[type="submit"] {
+  font-family: 'Bitter', serif;
+  font-weight: 600;
+  background: rgb(46, 130, 52);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.kit-signup button[type="submit"]:hover {
+  background: rgb(36, 108, 42);
+}
+
+/* Hide Kit JS branding if it ever loads */
+.formkit-powered-by-convertkit,
+.formkit-powered-by,
+a[href*="kit.com"][data-element="powered-by"],
+[data-element="powered-by"] {
+  display: none !important;
+}
+
+/* =============================================
+   PHOTO CREDITS — smaller, tighter to images
+   ============================================= */
+.photo-credit {
+  display: block;
+  font-size: 11px;
+  font-style: italic;
+  color: rgb(140, 128, 110);
+  margin-top: -8px;
+  margin-bottom: 16px;
+}
+
+/* Also style markdown italic lines right after images as credits */
+article p > img + br + em,
+article p > img ~ em,
+article p:has(> img) + p > em:only-child {
+  font-size: 11px;
+  color: rgb(140, 128, 110);
+}
+
+/* Gallery photos — clean with subtle warm shadow, no borders */
+.gallery img {
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(52, 46, 38, 0.12);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.gallery img:hover {
+  box-shadow: 0 4px 16px rgba(52, 46, 38, 0.2);
+  transform: scale(1.01);
+}
+
+/* Gallery credit text */
+.gallery + p em {
+  font-size: 11px;
+  color: rgb(140, 128, 110);
+}
+
+/* Calendar buttons hover */
+.cal-btn:hover {
+  opacity: 0.9;
+  filter: brightness(1.05);
+}
+
+/* =============================================
+   GALLERY FIGURE CAPTIONS — per-photo credits
+   ============================================= */
+.gallery figure {
+  margin: 0;
+  display: inline-block;
+}
+
+.gallery figcaption {
+  font-size: 10px;
+  font-style: italic;
+  color: rgb(140, 128, 110) !important;
+  text-align: right;
+  margin-top: 2px;
+  margin-bottom: 8px;
+}
+
+/* =============================================
+   TWO-COLUMN LAYOUT
+   ============================================= */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 600px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
