@@ -1,0 +1,4 @@
+{{ $url := .Get "url" }}
+<div style="display:flex; justify-content:center; margin:20px 0;">
+<iframe src="https://www.facebook.com/plugins/video.php?href={{ $url | urlquery }}&show_text=true&width=500" width="500" height="600" style="border:none;overflow:hidden;max-width:100%;" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+</div>

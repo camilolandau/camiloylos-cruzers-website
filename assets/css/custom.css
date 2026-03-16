@@ -258,10 +258,29 @@ article p:has(> img) + p > em:only-child {
   color: rgb(140, 128, 110);
 }
 
+/* Bold text — ensure readable in lists */
+strong {
+  color: rgb(22, 52, 28) !important;
+  font-weight: 700;
+}
+
 /* Calendar buttons hover */
 .cal-btn:hover {
   opacity: 0.9;
   filter: brightness(1.05);
+}
+
+/* =============================================
+   EMBEDDED MEDIA — centered
+   ============================================= */
+.instagram-media,
+.fb-video-embed {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.fb-video-embed {
+  text-align: center;
 }
 
 /* =============================================

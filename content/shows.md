@@ -2,6 +2,8 @@
 title: "Upcoming Shows"
 ---
 
+*Now booking for Summer and Fall 2026*
+
 ## [Yerba Buena Gardens Festival](https://ybgfestival.org/)
 *   **Date:** August 15th, 2026
 *   **Time:** 2:00 PM
