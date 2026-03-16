@@ -4,7 +4,7 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Bitter', serif;
+  font-family: 'Lobster', cursive;
 }
 
 /* =============================================
@@ -71,7 +71,13 @@ body, article, p, li, span {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: rgb(28, 72, 36) !important;
+  color: rgb(180, 40, 20) !important;
+}
+
+/* Site title in header — Lobster font */
+header a.text-base.font-medium {
+  font-family: 'Lobster', cursive !important;
+  font-size: 1.4rem !important;
 }
 
 /* Nav links greenish */

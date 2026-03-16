@@ -22,6 +22,7 @@ colorScheme = "camilo"
 # Header
 [header]
   layout = "basic"
+  disableTextInHeader = false
 
 # Footer
 [footer]
