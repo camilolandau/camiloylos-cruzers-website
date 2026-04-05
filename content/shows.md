@@ -16,6 +16,8 @@ title: "Upcoming Shows"
 
 {{< add-to-calendar title="Camilo y los Cruzers @ Point Arena Fireworks Festival" date="2026-07-03" time="17:00" endtime="22:00" location="Arena Cove, Point Arena, CA" url="https://pointarena.net/point-arena-independence-weekend/" >}}
 
+![Camilo playing guitar with fireworks in the background](/images/camilo_fireworks.jpg)
+
 ## [Yerba Buena Gardens Festival](https://ybgfestival.org/)
 *   **Date:** August 15th, 2026
 *   **Time:** 2:00 PM
