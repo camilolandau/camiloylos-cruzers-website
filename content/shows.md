@@ -4,11 +4,12 @@ title: "Upcoming Shows"
 
 *Now booking for Summer and Fall 2026*
 
-## Point Arena Independence Weekend Celebration
+## [Point Arena Fireworks Festival](https://pointarena.net/point-arena-independence-weekend/)
 *   **Date:** July 3rd, 2026
-*   **Location:** Point Arena, CA
+*   **Time:** TBA
+*   **Location:** Arena Cove, Point Arena, CA
 
-{{< add-to-calendar title="Camilo y los Cruzers @ Point Arena Independence Weekend Celebration" date="2026-07-03" location="Point Arena, CA" >}}
+{{< add-to-calendar title="Camilo y los Cruzers @ Point Arena Fireworks Festival" date="2026-07-03" time="17:00" endtime="22:00" location="Arena Cove, Point Arena, CA" url="https://pointarena.net/point-arena-independence-weekend/" >}}
 
 ## [Yerba Buena Gardens Festival](https://ybgfestival.org/)
 *   **Date:** August 15th, 2026
