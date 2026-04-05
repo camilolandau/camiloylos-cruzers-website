@@ -9,6 +9,15 @@ Band website for Camilo y los Cruzers, built with [Hugo](https://gohugo.io/) and
 - **Domain registrar:** Cloudflare (~$10/year)
 - **Hosting:** Cloudflare Pages (free)
 - **Dashboard:** https://dash.cloudflare.com — go to Compute > Workers & Pages > camiloylos-cruzers-website
+- **Pages URL:** camiloylos-cruzers-website.pages.dev
+
+### DNS (CRITICAL)
+
+The CNAME record for `camiloyloscruzers.com` must be set to **DNS only** (grey cloud), NOT Proxied (orange cloud). Cloudflare's proxy layer causes timeouts with Pages on this domain. Pages handles SSL and CDN on its own — the proxy is not needed.
+
+| Type  | Name | Target | Proxy |
+|-------|------|--------|-------|
+| CNAME | `@`  | `camiloylos-cruzers-website.pages.dev` | DNS only (grey cloud) |
 
 ## Deploying
 
