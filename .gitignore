@@ -17,3 +17,25 @@ Thumbs.db
 .vscode/
 .idea/
 .wrangler/
+
+# Figma MCP plugin (local dev tool)
+claude-talk-to-figma-mcp/
+
+# MCP config (local)
+.mcp.json
+
+# Source artwork (large files)
+art.jpg
+artwork/
+Camilo y los Cruzers .jpg
+
+# Design/print generation scripts and outputs
+generate_cover.py
+generate_jcard.py
+jcard_template.png
+jcard_template_4up.png
+cover_3000x3000.png
+
+# Project planning (not site content)
+summer_budget.csv
+DEPLOY_MUSIC_PAGE.md

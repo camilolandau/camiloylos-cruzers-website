@@ -2,7 +2,15 @@
 title: "Music"
 ---
 
-Music is coming summer 2026 to all platforms. Stay tuned!
+## Descarga Rockeada
+
+**Out July 12, 2025** on Round Whirled Records
+
+![Descarga Rockeada cover art](/descarga-rockeada-cover.jpg)
+
+Available on all platforms and [Bandcamp](https://roundwhirledrecords.bandcamp.com).
+
+---
 
 {{< instagram url="https://www.instagram.com/reel/DG6d2ndyGCf/" >}}
 

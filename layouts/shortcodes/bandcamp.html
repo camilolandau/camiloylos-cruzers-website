@@ -1,0 +1,17 @@
+{{ $type := .Get "type" | default "track" }}
+{{ $id := .Get "id" }}
+{{ $size := .Get "size" | default "large" }}
+{{ $bgcol := .Get "bgcol" | default "FFF8EB" }}
+{{ $linkcol := .Get "linkcol" | default "B42814" }}
+{{ $tracklist := .Get "tracklist" | default "false" }}
+{{ $artwork := .Get "artwork" | default "big" }}
+{{ $height := "120" }}
+{{ if eq $artwork "big" }}
+  {{ $height = "470" }}
+{{ end }}
+{{ if eq $size "small" }}
+  {{ $height = "42" }}
+{{ end }}
+<iframe style="border: 0; width: 100%; height: {{ $height }}px;" src="https://bandcamp.com/EmbeddedPlayer/{{ $type }}={{ $id }}/size={{ $size }}/bgcol={{ $bgcol }}/linkcol={{ $linkcol }}/tracklist={{ $tracklist }}/artwork={{ $artwork }}/transparent=true/" seamless>
+  <a href="https://roundwhirledrecords.bandcamp.com">Camilo y los Cruzers on Bandcamp</a>
+</iframe>
